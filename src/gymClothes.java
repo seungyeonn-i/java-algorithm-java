@@ -13,7 +13,7 @@ public class gymClothes {
     }
 
 
-    static int solution(int n, int[] lost, int[] reserve) {
+    public static int solution(int n, int[] lost, int[] reserve) {
         int answer = n-lost.length;
         //sorting
         Arrays.sort(lost);
