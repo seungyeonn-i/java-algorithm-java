@@ -9,6 +9,7 @@ public class FunctionalDevelopment {
 
         solution(progresses,speeds);
 
+        
     }
 
     static int[] solution(int[] progresses, int[] speeds) {
