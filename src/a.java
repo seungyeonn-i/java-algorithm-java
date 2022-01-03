@@ -1,27 +1,44 @@
-import java.util.Scanner;
+
+import java.util.*;
+
 
 public class a {
 
+    public static void main(String args[]) {
 
-    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
-        scanner.close();
+        System.out.println("입력:");
+        String change = scanner.next();
+        String input = change.toUpperCase();
 
-        for(int i =0; i<num ; i++) {
-            for(int j=num; 0<i;j--) {
 
-                System.out.print("*");
+        HashMap<Character , Integer> hashmap = new HashMap<Character , Integer>();
+
+        for(int i=0;i<input.length();i++) {
+            if(hashmap.containsKey(input.charAt(i)) == true) {
+                int value = hashmap.get(input.charAt(i));
+                hashmap.put(input.charAt(i),++value);
             }
-
-            System.out.println("\n");
+            else {
+                hashmap.put(input.charAt(i), 1);
+            }
         }
+////
+////        ArrayList<> array = hashmap.values().toArray();
+//        int count=0;
+////        for(int i=0;i<array.size();i++){
+////            if(hashmap.Collections.max(hashmap.values()).equals(array.get(i)))
+////                count ++;
+//        }
+//
+//        if(count > 0){
+//            System.out.println("?");
+//        }else{
+//            System.out.println( Collections.max(hashmap.values()) );
+//
+//        }
+//
+//        scanner.close();
     }
 
-
-    static void change(int a[]){
-        a[0] = 3;
-        a[3] = 9;
-    }
 }
-
