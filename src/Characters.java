@@ -96,50 +96,46 @@ public class Characters {
 
         int l = array.length;
         l++;
-        char [][] chars = new char[l][];
 
+        char [][] chars = new char[l][];
         for(int i=0;i<array.length;i++){
-                chars[i] = array[i];
+            chars[i] = new char[array[i].length];
+            for(int j=0;j<array[i].length;j++) {
+                chars[i][j] = array[i][j];
+            }
         }
+
+        chars[l - 2][0] = ' ';
 
         return chars;
 
     }
+
 
     static char[][] scanLines(Scanner scanner) {
         char[][] chars = new char [0][];
-
-
         int count = 0;
-
 
         while(scanner.hasNext()) {
 
-
             String buf = null;
             buf = scanner.next();
+
+
             chars = new char[1][buf.length()];
 
             for (int i = 0; i < buf.length(); i++) {
-                chars[count][i] = buf.charAt(i);
+                chars[chars.length-1][i] = buf.charAt(i);
             }
-
+//            count++;
             chars = addRow(chars);
-            count ++;
-
-            if (scanner.hasNext() && count != 0) {
-                chars = addRow(chars);
-            }
 
 
-
-            ///
         }
 
 
         return chars;
     }
-
 
 
     ///이제 메인
