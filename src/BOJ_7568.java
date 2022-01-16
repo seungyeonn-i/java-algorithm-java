@@ -26,7 +26,6 @@ public class BOJ_7568 {
         }
 
         for(int i=0;i<n;i++){
-
             for(int j=0;j<n;j++){
                 if(arr[i][0] < arr[j][0])
                     if(arr[i][1] < arr[j][1])
