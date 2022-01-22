@@ -68,7 +68,6 @@ public class BOJ_14889 {
     }
 
 
-
     public static void main(String[] args) {
         input();
         pro();
