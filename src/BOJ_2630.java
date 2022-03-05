@@ -26,7 +26,6 @@ public class BOJ_2630 {
         System.out.println(white);
         System.out.println(blue);
 
-
     }
 
     static void partition(int row, int col, int size){

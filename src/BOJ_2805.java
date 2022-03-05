@@ -35,6 +35,7 @@ public class BOJ_2805 {
 
         for(int i=trees.get(index+1);i>trees.get(index);i--){
 
+//            System.out.println(cal(i));
             if (m == cal(i)){
                 System.out.println(i);
                 break;
